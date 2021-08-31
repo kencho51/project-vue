@@ -1,4 +1,5 @@
-# calculator
+# calculator - final product
+![calculor](src/assets/calculator.png)
 
 ## Project setup
 ```
