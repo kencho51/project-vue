@@ -3,7 +3,7 @@
 This repo is for learning Vue framework by building different vue app.
 
 ### Vue installation 
-Follow this [doc](https://v3.vuejs.org/guide/installation.html#npm) to for installation.
+Follow this [doc](https://v3.vuejs.org/guide/installation.html#npm) for installation.
 Follow this [doc](https://www.digitalocean.com/community/tutorials/how-to-generate-a-vue-js-single-page-app-with-vue-create) for project creation.
 
 ### Projects
