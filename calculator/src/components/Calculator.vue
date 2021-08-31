@@ -1,25 +1,25 @@
 <template>
   <div class="calculator">
     <div class="display">{{current || '0'}}</div>
-    <div @click="clear" class="btn">C</div>
-    <div @click="sign" class="btn">+/-</div>
-    <div @click="percent" class="btn">%</div>
-    <div @click="divide" class="btn operator">÷</div>
-    <div @click="append('7')" class="btn">7</div>
-    <div @click="append('8')" class="btn">8</div>
-    <div @click="append('9')" class="btn">9</div>
-    <div @click="times" class="btn operator">x</div>
-    <div @click="append('4')" class="btn">4</div>
-    <div @click="append('5')" class="btn">5</div>
-    <div @click="append('6')" class="btn">6</div>
-    <div @click="minus" class="btn operator">-</div>
-    <div @click="append('1')" class="btn">1</div>
-    <div @click="append('2')" class="btn">2</div>
-    <div @click="append('3')" class="btn">3</div>
-    <div @click="add" class="btn operator">+</div>
-    <div @click="append('0')" class="btn zero">0</div>
-    <div @click="dot" class="btn">.</div>
-    <div @click="equal" class="btn operator">=</div>
+    <button @click="clear" class="button">C</button>
+    <button @click="sign" class="button">+/-</button>
+    <button @click="percent" class="button">%</button>
+    <button @click="divide" class="button operator">÷</button>
+    <button @click="append('7')" class="button">7</button>
+    <button @click="append('8')" class="button">8</button>
+    <button @click="append('9')" class="button">9</button>
+    <button @click="times" class="button operator">x</button>
+    <button @click="append('4')" class="button">4</button>
+    <button @click="append('5')" class="button">5</button>
+    <button @click="append('6')" class="button">6</button>
+    <button @click="minus" class="button operator">-</button>
+    <button @click="append('1')" class="button">1</button>
+    <button @click="append('2')" class="button">2</button>
+    <button @click="append('3')" class="button">3</button>
+    <button @click="add" class="button operator">+</button>
+    <button @click="append('0')" class="button zero">0</button>
+    <button @click="dot" class="button">.</button>
+    <button @click="equal" class="button operator">=</button>
   </div>
 </template>
 
@@ -88,7 +88,7 @@ export default {
 
 <style scoped>
 .calculator {
-  width: 400px;
+  width: 800px;
   margin: 0 auto;
   font-size: 40px;
   display: grid;
@@ -107,9 +107,10 @@ export default {
   position: center;
 }
 
-.btn {
+.button {
   background-color: #F2F2F2;
-  border: 1px solid #999;
+  border: none;
+  font-size: 40px;
 }
 
 .operator {
