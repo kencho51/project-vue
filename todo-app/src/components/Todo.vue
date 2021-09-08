@@ -19,20 +19,20 @@
       </tr>
       </thead>
       <tbody>
-      <tr>
-        <td>Steal bananas</td>
-        <td>To-do</td>
-        <td>
-          <div class="text-center">
-            <span class="fa fa-pen"></span>
-          </div>
-        </td>
-        <td>
-          <div class="text-center">
-            <span class="fa fa-trash"></span>
-          </div>
-        </td>
-      </tr>
+        <tr v-for="(task, index) in tasks" :key="index">
+          <td>{{ task.name }}</td>
+          <td>{{ task.status }}</td>
+          <td>
+            <div class="text-center">
+              <span class="fa fa-pen"></span>
+            </div>
+          </td>
+          <td>
+            <div class="text-center">
+              <span class="fa fa-trash"></span>
+            </div>
+          </td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -43,6 +43,20 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  data() {
+    return {
+      tasks: [
+        {
+          name: 'Steal bananas',
+          status: 'To-do'
+        },
+        {
+          name: 'Eat chocolte',
+          status: 'In progress'
+        }
+      ]
+    }
   }
 }
 </script>
