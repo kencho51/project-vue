@@ -22,3 +22,14 @@ Vue CLI v4.5.6
 ❯  Default (Vue 3 Preview) ([Vue 3] babel, eslint)
   Manually select features
 ```
+
+### Project - Todo App
+To build a vue todo app from [youtube](https://www.youtube.com/watch?v=8AlnTd31KUk&list=WL&index=2), [repo](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbEMxUnRIcXhRVnBRSVhJMUZfaGdSQ0xKNnpLZ3xBQ3Jtc0trUVZSZ3BEREV5R1ItQkNuNlpIQ0lQTzBZNEU3SWJFOXhyLWJFdkRYR2RXTVBnSHdYUmRIck50R2h3U0pJeFBDaXZWYW9zLUwtS0NGY1BXd1Fkc0RhbkJBWnNhdHpNUUxmNzdscUNFYUY0U3hlR3JVQQ&q=https%3A%2F%2Fgithub.com%2FProgrammerNotesYT%2Fvue-todo-app)
+`% vue create calculator`
+```bash
+Vue CLI v4.5.6
+? Please pick a preset:
+❯  Default ([Vue 2] babel, eslint)
+  Default (Vue 3 Preview) ([Vue 3] babel, eslint)
+  Manually select features
+```
