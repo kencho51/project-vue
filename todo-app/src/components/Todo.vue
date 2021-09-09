@@ -21,7 +21,7 @@
       <tbody>
         <tr v-for="(task, index) in tasks" :key="index">
           <td>{{ task.name }}</td>
-          <td>{{ task.status }}</td>
+          <td><span class="pointer">{{ task.status }}</span></td>
           <td>
             <div class="text-center" @click="editTask(index)">
               <span class="fa fa-pen"></span>
@@ -48,6 +48,7 @@ export default {
     return {
       task: '',
       editedTask: null,
+      availableStatus: ['To-do', 'In-progress', 'Finished'],
 
       tasks: [
         {
@@ -93,5 +94,7 @@ export default {
 
 
 <style scoped>
-
+.pointer {
+  cursor: pointer;
+}
 </style>
