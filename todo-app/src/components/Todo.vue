@@ -23,7 +23,7 @@
           <td>{{ task.name }}</td>
           <td style="width: 120px">
             <span @click="changeStatus(index)" class="pointer">
-              {{ task.status }}
+              {{ firstCharUpper(task.status) }}
             </span>
           </td>
           <td>
@@ -52,7 +52,7 @@ export default {
     return {
       task: '',
       editedTask: null,
-      availableStatus: ['To-do', 'In-progress', 'Finished'],
+      availableStatus: ['to-do', 'in-progress', 'finished'],
 
       tasks: [
         {
@@ -97,6 +97,10 @@ export default {
       let newIndex = this.availableStatus.indexOf(this.tasks[index].status);
       if(++newIndex > 2) newIndex = 0;
       this.tasks[index].status = this.availableStatus[newIndex];
+    },
+
+    firstCharUpper(str) {
+      return str.charAt(0).toUpperCase() + str.slice(1);
     }
   }
 }
