@@ -4,8 +4,8 @@
 
     <!-- Input -->
     <div class="d-flex">
-      <input type="text" placeholder="Enter task" class="form-control">
-      <button class="btn btn-warning rounded-0">SUBMIT</button>
+      <input v-model="task" type="text" placeholder="Enter task" class="form-control">
+      <button @click="submitTask" class="btn btn-warning rounded-0">SUBMIT</button>
     </div>
 
     <!-- Task table -->
@@ -28,7 +28,7 @@
             </div>
           </td>
           <td>
-            <div class="text-center">
+            <div class="text-center" @click="deleteTask(index)">
               <span class="fa fa-trash"></span>
             </div>
           </td>
@@ -46,6 +46,7 @@ export default {
   },
   data() {
     return {
+      task: 'Hello World!!!',
       tasks: [
         {
           name: 'Steal bananas',
@@ -56,6 +57,23 @@ export default {
           status: 'In progress'
         }
       ]
+    }
+  },
+
+  methods: {
+    submitTask() {
+      if(this.task.length === 0) return;
+
+      this.tasks.push({
+        name: this.task,
+        status: 'To-do'
+      });
+
+      this.task = '';
+    },
+
+    deleteTask(index) {
+      this.tasks.splice(index, 1);
     }
   }
 }
