@@ -21,7 +21,11 @@
       <tbody>
         <tr v-for="(task, index) in tasks" :key="index">
           <td>{{ task.name }}</td>
-          <td><span class="pointer">{{ task.status }}</span></td>
+          <td style="width: 120px">
+            <span @click="changeStatus(index)" class="pointer">
+              {{ task.status }}
+            </span>
+          </td>
           <td>
             <div class="text-center" @click="editTask(index)">
               <span class="fa fa-pen"></span>
@@ -87,6 +91,12 @@ export default {
     editTask(index) {
       this.task = this.tasks[index].name;
       this.editedTask = index;
+    },
+
+    changeStatus(index) {
+      let newIndex = this.availableStatus.indexOf(this.tasks[index].status);
+      if(++newIndex > 2) newIndex = 0;
+      this.tasks[index].status = this.availableStatus[newIndex];
     }
   }
 }
